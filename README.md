@@ -12,4 +12,3 @@ These improvements focus on reducing message spam and giving you finer control o
 ![traffic light code example](doc/demo_mqtt_function.PNG)
 
 ![esp32 traffic light](doc/traffic.gif)
-```
