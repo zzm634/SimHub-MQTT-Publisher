@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimHub.Plugins.OutputPlugins.Dash.GLCDTemplating;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -15,6 +16,20 @@ namespace SimHub.MQTTPublisher.ViewModels
         private string _login;
 
         private string _password;
+
+        private int _publishInterval;
+
+        private ExpressionValue _expression;
+
+        public ExpressionValue Expression
+        {
+            get => _expression;
+            set
+            {
+                _expression = value;
+                OnPropertyChanged();
+            }
+        }
 
         private Guid _UserId;
 
@@ -64,6 +79,16 @@ namespace SimHub.MQTTPublisher.ViewModels
             set
             {
                 _UserId = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int PublishInterval
+        {
+            get => _publishInterval;
+            set
+            {
+                _publishInterval = value;
                 OnPropertyChanged();
             }
         }

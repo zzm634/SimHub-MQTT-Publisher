@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimHub.Plugins.OutputPlugins.Dash.GLCDTemplating;
+using System;
 
 namespace SimHub.MQTTPublisher
 {
@@ -14,6 +15,10 @@ namespace SimHub.MQTTPublisher
         public string Login { get; set; } = "admin";
 
         public string Password { get; set; } = "admin";
+
+        public int PublishInterval { get; set; } = 1000;
+
+        public ExpressionValue Expression { get; set; } = new ExpressionValue();
     }
 
     public class SimHubMQTTPublisherPluginUserSettings

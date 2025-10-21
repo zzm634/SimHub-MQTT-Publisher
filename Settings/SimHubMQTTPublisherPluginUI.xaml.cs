@@ -1,4 +1,5 @@
 ﻿using SimHub.MQTTPublisher.ViewModels;
+using SimHub.Plugins.Styles;
 using System.Windows.Controls;
 
 namespace SimHub.MQTTPublisher.Settings
@@ -20,6 +21,8 @@ namespace SimHub.MQTTPublisher.Settings
                 Login = simHubMQTTPublisherPlugin.Settings.Login,
                 Password = simHubMQTTPublisherPlugin.Settings.Password,
                 UserId = simHubMQTTPublisherPlugin.UserSettings.UserId,
+                PublishInterval = simHubMQTTPublisherPlugin.Settings.PublishInterval,
+                Expression = simHubMQTTPublisherPlugin.Settings.Expression,
             };
 
             this.DataContext = Model;
@@ -35,8 +38,11 @@ namespace SimHub.MQTTPublisher.Settings
             SimHubMQTTPublisherPlugin.Settings.Topic = Model.Topic;
             SimHubMQTTPublisherPlugin.Settings.Login = Model.Login;
             SimHubMQTTPublisherPlugin.Settings.Password = Model.Password;
+            SimHubMQTTPublisherPlugin.Settings.PublishInterval = Model.PublishInterval;
+            SimHubMQTTPublisherPlugin.Settings.Expression = Model.Expression;
 
             SimHubMQTTPublisherPlugin.CreateMQTTClient();
         }
+
     }
 }
